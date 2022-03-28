@@ -1,0 +1,99 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: darkred;
+    height: 100vh;
+    width:100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#gameBoard{
+    background-color: #1a3263;
+    width:100vmin;
+    height:100vmin;
+    /*
+        vmin => بتحسب طول وعرض الصفحه المتصفح وبتخلي الديف بتاع الجيمبورد ثابته 
+    */
+    display: grid;
+    grid-template-columns: repeat(21,1fr);
+    grid-template-rows: repeat(21,1fr);
+}
+.snake{
+    background-color: #e8e2db;
+    border:0.25vmin solid black;
+}
+.food{
+    border-radius: 50%;
+    background-color: #fab95b;
+    border:0.25vmin solid black;
+}
+.btnns{
+    position: relative;
+    top:11%;
+    left:10%;
+}
+.btn{
+    border:none;
+    outline:none;
+    width:80px;
+    padding:15px 20px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    text-align: center;
+    margin:2px;
+}
+.re{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.v{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.countr{
+    width:200px;
+    background-color: #e8e2db;
+    padding:15px 20px;
+    position: relative;
+    top:-20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pop{
+    width:250px;
+    background-color: white;
+    padding:15px;
+    border-radius: 10px;
+    box-shadow:10px 10px 10px black;
+    text-align: center;
+    position: absolute;
+    top:5%;
+    left:50;
+    transform: translate(-50%,-50%);
+    display: none;
+}
+.pop.active{
+    display: block;
+}
+.pop span{
+    display: flex;
+    justify-content: space-between;
+}
+@media(max-width:768px){
+    .btnns{
+        display:block;
+    }
+}
+@media(min-width:1000px){
+    .btnns{
+        display:none;
+    }
+}
